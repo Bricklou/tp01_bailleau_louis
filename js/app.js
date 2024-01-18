@@ -112,14 +112,12 @@ function revalidateForm() {
  * Exécution de la validation pour un champ input
  */
 function validateInput(input) {
-    const obj = inputs[input]
-
-    const valid = obj.validation(obj.value)
+    const valid = input.validation(input.value)
 
     if (!valid) {
-        obj.element.classList.add('error')
+        input.element.classList.add('error')
     } else {
-        obj.element.classList.remove('error')
+        input.element.classList.remove('error')
     }
 }
 
@@ -127,7 +125,7 @@ function validateInput(input) {
  * Vérifie si le formulare est valide
  */
 function validateForm() {
-    Object.values(inputs).forEach((obj) => validateInput(obj))
+    Object.values(inputs).forEach(validateInput)
     revalidateForm()
 }
 
@@ -164,5 +162,5 @@ form.addEventListener('submit', (event) => {
 
     validateForm();
 
-    alert(`Bonjour ${values.prenom} ${value.nom} !`);
+    alert(`Bonjour ${inputs.prenom.value} ${inputs.nom.value} !`);
 })
