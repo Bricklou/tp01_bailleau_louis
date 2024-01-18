@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TP01 - Bailleau Louis</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-gray-200 p-4">
+    <h1 class="font-bold text-4xl tracking-wide mb-8">
+      Bienvenu sur mon TP 01 !
+    </h1>
+
+    <section
+      class="rounded-2xl bg-white px-8 py-4 mx-4 lg:max-w-screen-lg lg:mx-auto shadow-lg"
+    >
+      <fieldset>
+        <legend class="font-bold tracking-wide text-2xl mb-2">
+          Exercice 1
+        </legend>
+
+        <form
+          method="post"
+          id="submit-form"
+          class="grid grid-cols-1 lg:grid-cols-2 grid-flow-row gap-4"
+        >
+          <!-- Nom -->
+          <div class="input">
+            <label class="label" for="nom">Nom</label>
+            <input type="text" name="nom" id="nom" required />
+          </div>
+          <!-- Prénom -->
+          <div class="input">
+            <label class="label" for="prenom">Prénom</label>
+            <input type="text" name="prenom" id="prenom" required />
+          </div>
+
+          <!-- Adresse -->
+          <div class="input lg:col-span-2">
+            <label class="label" for="adresse">Adresse</label>
+            <input type="text" name="adresse" id="adresse" required />
+          </div>
+
+          <!-- Code postal -->
+          <div class="input">
+            <label class="label" for="codePostal">Code postal</label>
+            <input type="number" name="codePostal" id="codePostal" required />
+          </div>
+
+          <!-- Ville -->
+          <div class="input">
+            <label class="label" for="ville">Ville</label>
+            <input type="text" name="ville" id="ville" required />
+          </div>
+
+          <!-- Téléphone -->
+          <div class="input">
+            <label class="label" for="telephone">Téléphone</label>
+            <input type="text" name="telephone" id="telephone" required />
+          </div>
+
+          <!-- Email -->
+          <div class="input">
+            <label class="label" for="email">Email</label>
+            <input type="text" name="email" id="email" required />
+          </div>
+
+          <!-- Civilité -->
+          <div class="input">
+            <label class="label" for="civilite">Civilité</label>
+            <select name="civilite" id="civilite" required>
+              <option value="" disabled selected>
+                Séléctionnez votre civilité
+              </option>
+              <option value="Monsieur">Monsieur</option>
+              <option value="Madame">Madame</option>
+            </select>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-chevron-down select-arrow"
+              aria-hidden="true"
+            >
+              >
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </div>
+
+          <hr class="divider lg:col-span-2" />
+
+          <!-- Login -->
+          <div class="input">
+            <label class="label" for="login">Login</label>
+            <input type="text" name="login" id="login" required />
+          </div>
+
+          <!-- Mot de passe -->
+          <div class="input col-start-1">
+            <label class="label" for="motDePasse">Mot de passe</label>
+            <input type="password" name="motDePasse" id="motDePasse" required />
+          </div>
+
+          <!-- Confirmation -->
+          <div class="input">
+            <label class="label" for="confirmation">Confirmation</label>
+            <input
+              type="password"
+              name="confirmation"
+              id="confirmation"
+              required
+            />
+          </div>
+
+          <div class="lg:col-span-2 flex justify-end">
+            <button type="submit" class="button" disabled>
+              Submit
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-send-horizontal"
+                aria-hidden="true"
+              >
+                <path d="m3 3 3 9-3 9 19-9Z" />
+                <path d="M6 12h16" />
+              </svg>
+            </button>
+          </div>
+        </form>
+      </fieldset>
+    </section>
+
+    <script src="./js/app.js" defer></script>
+  </body>
+</html>
